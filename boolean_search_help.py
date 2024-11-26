@@ -81,9 +81,11 @@ def method1(aspect1, aspect2, opinion1, opinion2):
         opinionIntersection = opinion_1_set.intersection(opinion_2_set)
         aspect_1_intersection = aspect_1_set.intersection(opinionIntersection)
         aspect_2_intersection = aspect_2_set.intersection(opinionIntersection)
-        termsIntersection = aspect_1_intersection.intersection(aspect_2_intersection)
-        print(len(termsIntersection))
-        print(termsIntersection)
+        #termsIntersection = aspect_1_intersection.intersection(aspect_2_intersection)
+        aspect_1_intersection.update(aspect_2_intersection)
+        results = aspect_1_intersection
+        print(len(results))
+        print(results)
         
             
             

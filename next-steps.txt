@@ -1,0 +1,87 @@
+Questions for Sadat
+-ASK ABOUT HW3
+-Do I need to make any big changes to my boolean search?
+-I process queries same as corpus for boolean search, right?
+
+Next Steps
+-Build and train simple embedding and model on the reviews (keras tutorial)
+-embed by words and classify text
+    -train on 90%
+    -test on 10% (how decide what 10%? Boolean search?)
+-embed by sentence and classify text
+
+-Use pre-trained glove embedding
+-embed by words and classify text
+-embed by sentence and classify text
+
+Analyze difference in results:
+hypothesis: embedding by words will produce better results when I build and train model, but sentence embedding
+will work better with pretrained model. How determine?
+-Use LLM API like chatGPT claude or llama (costs money)
+    -Just for comparing query results to my model results
+-powersell nvida dsmi
+    -more than 32gb? Run LLM on your computer
+-Accuracy maybe not great metric because hard to determine
+-Recall
+-Precision
+-F-score
+
+
+-Questions
+
+-I don't do separate embedding for aspects and sentiments, do I? Single embedding should capture both
+-How do I embed my queries?
+    -Index through dict containing words and attendant vectors
+    -If I decide to do ML learning then I will conactonate my query vectors
+    -Strings in query should represent my vocabulary, right? Which should have the word as a key and the dense vector as the value?
+Glove is just a method for vectorization, right? It cannot be trained?
+-The term training confuses me
+-Should I do fine-tuning??
+Next Steps
+
+TRAINING: train search algorithm 
+
+Train search algorithm so when you input A and O you get specific reviews back
+e.g train with logistic regression using dense vectors as input
+    
+Look up how to train a search/query algorithm
+
+Look up sentence transformer
+
+Questions: 
+
+even if I download a pre-trained Glove embedding model. I have to train it again on my data?
+
+"Instead of training your own embedding, an alternative option is to use pre-trained word embedding like GloVe 
+or Word2Vec. In this part, we will be using the GloVe Word Embedding trained on 
+Wikipedia + Gigaword 5; download it from here."
+
+
+
+ ImportError: DLL load failed while importing _multiarray_umath: The specified module could not be found.
+ImportError: DLL load failed while importing _multiarray_umath: The specified module could not be found.
+ImportError: DLL load failed while importing _multiarray_umath: The specified module could not be found.
+ImportError: DLL load failed while importing _multiarray_umath: The specified module could not be found.
+ImportError: DLL load failed while importing _multiarray_umath: The specified module could not be found.
+ImportError: DLL load failed while importing _multiarray_umath: The specified module could not be found.
+ImportError: DLL load failed while importing _multiarray_umath: The specified module could not be found.
+ImportError: DLL load failed while importing _multiarray_umath: The specified module could not be found.
+ImportError: DLL load failed while importing _multiarray_umath: The specified module could not be found.
+Traceback (most recent call last):
+  File "c:\Users\Leeha\Program Files\Review-Sentiment-Search\word_embedding_example.py", line 17, in <module>
+    from gensim.utils import simple_preprocess
+  File "C:\Users\Leeha\anaconda3\envs\tensor_compatible_env\Lib\site-packages\gensim\__init__.py", line 11, in <module>    
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, utils  # noqa:F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Leeha\anaconda3\envs\tensor_compatible_env\Lib\site-packages\gensim\parsing\__init__.py", line 4, in <module>
+    from .preprocessing import (  # noqa:F401
+  File "C:\Users\Leeha\anaconda3\envs\tensor_compatible_env\Lib\site-packages\gensim\parsing\preprocessing.py", line 26, in <module>
+    from gensim import utils
+  File "C:\Users\Leeha\anaconda3\envs\tensor_compatible_env\Lib\site-packages\gensim\utils.py", line 35, in <module>       
+    import scipy.sparse
+  File "C:\Users\Leeha\anaconda3\envs\tensor_compatible_env\Lib\site-packages\scipy\sparse\__init__.py", line 295, in <module>
+    from ._csr import *
+  File "C:\Users\Leeha\anaconda3\envs\tensor_compatible_env\Lib\site-packages\scipy\sparse\_csr.py", line 11, in <module>  
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+ImportError: numpy._core.multiarray failed to import
+PS C:\Users\Leeha\Program Files\Review-Sentiment-Search> 
